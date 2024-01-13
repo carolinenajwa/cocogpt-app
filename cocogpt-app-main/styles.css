@@ -1,0 +1,176 @@
+/***************/
+/** DARK MODE **/
+/***************/
+
+
+/* .chat-box {
+    max-height: 450px;
+    overflow-y: auto;
+    border: 1px solid #ECEFF1;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: whitesmoke;
+} */
+
+/* .chat-message {
+    margin-bottom: 15px;
+} */
+/* .user-message {
+    color: #0056b3; 
+    margin-left: 10px;
+}
+.bot-message {
+    color: #800080; 
+}
+.feedback-icon {
+    border: 1px solid #000;
+    padding: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+    display: inline-block;
+}
+.feedback-container {
+    margin-top: 5px;
+}
+.bot-message.latest-response {
+    background-color: #F5F5F5; 
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px 0;
+    color: black;
+    font-weight: bold;
+}
+.instruction-box {
+    border: 1px solid #ECEFF1;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: silver;
+    color: #333;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #ddd9d9;
+}
+.css-2trqyj {
+    color: whitesmoke;
+} */
+
+
+/***************/
+/** LIGHT MODE **/
+/***************/
+
+/* Main Chat Box Styling */
+.chat-box {
+    max-height: 450px;
+    overflow-y: auto;
+    border: 1px solid #707ddd; 
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #ffffff; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+
+/* Individual Chat Message Styling */
+.chat-message {
+    margin-bottom: 15px;
+    line-height: 1.4; 
+}
+
+/* User Message Styling */
+.user-message {
+    color: #2d3098; 
+    margin-left: 10px;
+    font-style: italic; 
+}
+
+/* Bot Message Styling */
+.bot-message {
+    color: #333; 
+    background-color: #f0f0f0; 
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+/* Latest Response from Bot */
+.bot-message.latest-response {
+    background-color: #e0e0e0; 
+    font-weight: bold;
+}
+
+/* Feedback Icon Styling */
+.feedback-icon {
+    border: 1px solid #2d3098; 
+    padding: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+/* Feedback Container Styling */
+.feedback-container {
+    margin-top: 5px;
+}
+
+/* Instruction Box Styling */
+.instruction-box {
+    border: 1px solid #707ddd; 
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #e6e6e6; 
+    color: #333;
+    font-family: 'Arial', sans-serif; 
+}
+
+/* Header Elements Styling */
+h1, h2, h3, h4, h5, h6 {
+    color: #1a1a1d; 
+    font-family: 'Helvetica Neue', sans-serif; 
+}
+
+/* Specific Class Styling */
+.css-2trqyj {
+    color: #707ddd; 
+}
+
+/** Welcome.py */
+
+/* General padding and margins for the app */
+body {
+    padding: 10px;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Image Styling - Add padding and centering */
+.image-container {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Customizes the look of headers */
+.header {
+    color: #2d3098; /* Dark purple, as per your brand color */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Improves the look of input fields and buttons */
+.stTextInput, .stButton > button {
+    margin: 5px 0;
+    width: 100%;
+}
+
+/* Add padding around the image */
+.image-padding {
+    padding: 20px; /* Adjust the padding as needed */
+    text-align: center; /* Center the image */
+}
+
+#GithubIcon {
+  visibility: hidden;
+}
