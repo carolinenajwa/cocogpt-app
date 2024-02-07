@@ -277,15 +277,15 @@ class CocoGPT():
   def load_topics_from_a_predefined_task(self, task_name: str):
     if task_name not in self.predefined_tasks:
         raise ValueError(f"The task '{task_name}' does not exist in predefined tasks.")
-      task = self.predefined_tasks[task_name]
+    task = self.predefined_tasks[task_name]
     # self.wrap_print(f"Checkpoint - Loading Task: {task_name} with details: {task}", is_checkpoint=True) # Checkpoint
     if not isinstance(task['checklist'], list):
         raise TypeError(f"The checklist for task '{task_name}' is not a list.")
     main_topic_name = self.topic_type['goal'] + task['goal']
     self.topic_stack.append(main_topic_name)
-      for topic_name in task['checklist'][::-1]:
-        topic_name = self.topic_type['ask'] + topic_name
-        self.topic_stack.append(topic_name)
+    for topic_name in task['checklist'][::-1]:
+      topic_name = self.topic_type['ask'] + topic_name
+      self.topic_stack.append(topic_name)
     return main_topic_name + ', ' + ', '.join(self.topic_stack)
 
 
@@ -445,7 +445,7 @@ class CocoGPT():
         human_input=query
     )
     # self.wrap_print(f"Checkpoint - Agent Output: {agent_output}", is_checkpoint=True) # Checkpoint
-      tool, tool_input = self.parse_agent_output(agent_output)
+    tool, tool_input = self.parse_agent_output(agent_output)
 
     # if tool == 'Jump To an Existing Topic' and tool_input not in self.topic_stack:
     #   self.finish_the_current_topic()

@@ -3,22 +3,22 @@ import streamlit as st
 from azure.cosmos import CosmosClient, PartitionKey
 
 # Initialize Cosmos DB (use the same credentials as in app.py)
-url = st.secrets["COSMO_URL"]
-key = st.secrets["COSMO_KEY"]
-database_name = st.secrets["COSMO_DB"]
-container_name = st.secrets["COSMO_CONTAINER"]
+# url = st.secrets["COSMO_URL"]
+# key = st.secrets["COSMO_KEY"]
+# database_name = st.secrets["COSMO_DB"]
+# container_name = st.secrets["COSMO_CONTAINER"]
 
-client = CosmosClient(url, credential=key)
-database = client.get_database_client(database_name)
-container = database.get_container_client(container_name)
+# client = CosmosClient(url, credential=key)
+# database = client.get_database_client(database_name)
+# container = database.get_container_client(container_name)
 
 # Function to insert user information into Cosmos DB
-def insert_user_info(user_data):
-    try:
-        response = container.upsert_item(user_data)
-        return response
-    except Exception as e:
-        return {"error": str(e)}
+# def insert_user_info(user_data):
+#     try:
+#         response = container.upsert_item(user_data)
+#         return response
+#     except Exception as e:
+#         return {"error": str(e)}
 
 
 def check_auth_token():
@@ -126,13 +126,13 @@ if st.session_state.get('auth_status', False) and not st.session_state['info_sub
                 "LastName": last_name,
                 "Email": email
             }
-            result = insert_user_info(user_data)
-            if "error" in result:
-                st.error(f"Failed to submit user information: {result['error']}")
-            else:
-                st.session_state['info_submitted'] = True
-                st.success("User information submitted successfully!")
-                st.rerun()  # Rerun the app to update the display
+            # result = insert_user_info(user_data)
+            # if "error" in result:
+            #     st.error(f"Failed to submit user information: {result['error']}")
+            # else:
+            #     st.session_state['info_submitted'] = True
+            #     st.success("User information submitted successfully!")
+            #     st.rerun()  # Rerun the app to update the display
 
 # Display instructions if the information has been submitted
 if st.session_state['info_submitted']:

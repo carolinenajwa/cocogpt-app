@@ -9,16 +9,16 @@ import time
 from PIL import Image
 
 # Cosmos DB credentials
-url = st.secrets["COSMO_URL"]
-key = st.secrets["COSMO_KEY"]
-database_name = st.secrets["COSMO_DB"]
-container_name = st.secrets["COSMO_CONTAINER"]
+# url = st.secrets["COSMO_URL"]
+# key = st.secrets["COSMO_KEY"]
+# database_name = st.secrets["COSMO_DB"]
+# container_name = st.secrets["COSMO_CONTAINER"]
 
-# Initialize the Cosmos client
-client = CosmosClient(url, credential=key)
-# Select the database and container
-database = client.get_database_client(database_name)
-container = database.get_container_client(container_name)
+# # Initialize the Cosmos client
+# client = CosmosClient(url, credential=key)
+# # Select the database and container
+# database = client.get_database_client(database_name)
+# container = database.get_container_client(container_name)
 
 # Initialize CocoGPT instance
 my_cocogpt = CocoGPT()
